@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Draft Calculator</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- shopping.html -->
+        <form action="" method="post" id="draftForm" novalidate>
+            <legend> Draft Calculator</legend>
+            <fieldset>
+                <div>
+                    <label for="total_pop">Total Population</label>
+                    <input type="number"
+                    name="total_pop"
+                    id="total_pop"
+                    required>
+                </div>
+                <div>
+                    <label for="mil_pop">Military & Thief Population</label>
+                    <input type="number"
+                    name="mil_pop"
+                    id="mil_pop"
+                    required>
+                </div>
+                <div>
+                    <label for="pes_pop">Peasant Population</label>
+                    <input type="number"
+                    name="pes_pop"
+                    id="pes_pop"
+                    required>
+                </div>
+                <div>
+                    <label for="wiz_pop">Wizard Population</label>
+                    <input type="number"
+                    name="wiz_pop"
+                    id="wiz_pop"
+                    required>
+                </div>
+                <div>
+                    <label for="draft_rate">Draft Rate</label>
+                    <select name="draft_rate"
+                        id="draft_rate"
+                        required>
+                        <option value="reserved"> Reserved </option>
+                        <option value="normal"> Normal </option>
+                        <option value="aggressive"> Aggressive </option>
+                        <option value="emergency" selected="selected"> Emergency </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="patriotism">Patriotism</label>
+                    <input type="checkbox"
+                    name="patriotism"
+                    id="patriotism"
+                    checked="checked"
+                    required>
+                </div>
+                <div>
+                    <label for="target_draft">Target Draft Rate</label>
+                    <input type="number"
+                    name="target_draft"
+                    id="target_draft"
+                    value="70"
+                    required>
+                </div>
+                <div>
+                    <label for="hours">Hours Required</label>
+                    <input type="text"
+                    name="hours"
+                    id="hours"
+                    readonly>
+                </div>
+                <div>
+                    <input type="submit"
+                    value="Calculate"
+                    id="submit">
+                </div>
+            </fieldset>
+        </form>
+        <script src="js/calculator_dbg.js"></script>
+        <script> draft_cljs.calculator.init(); </script>
+    </body>
+</html>
