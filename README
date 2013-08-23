@@ -1,0 +1,11 @@
+You'll need leiningen 2 in order to host the draft calculator. In order to host this page, first navigate to the base directory. Then run
+
+lein cljsbuild once prod
+
+Second, run
+
+lein ring server-headless
+
+This will host your page on localhost:3000. If you want to host it on a different port, you'll need to run
+
+lein ring server-headless PORTNUM

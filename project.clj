@@ -9,16 +9,16 @@
   :source-paths ["src/clj"]
   :cljsbuild { 
     :builds {
-      ;; :main {
-      ;;   :source-paths ["src/cljs"]
-      ;;   :compiler {:output-to "resources/public/js/calculator_dbg.js"
-      ;;              :optimizations :simple
-      ;;              :pretty-print true}}
+      :dev {
+        :source-paths ["src/cljs"]
+        :compiler {:output-to "resources/public/js/calculator_dbg.js"
+                   :optimizations :simple
+                   :pretty-print true}}
       :prod {
         :source-paths ["src/cljs" ]
         :compiler {:output-to "resources/public/js/calculator.js"
                    :optimizations :advanced
-                   :pretty-print true}}
+                   :pretty-print false}}
              }}
   :ring {:handler draft-cljs.server/handler})
 
